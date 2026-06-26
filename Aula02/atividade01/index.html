@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="botao-tema">Alterar cor</button>
+
+    <h1>Cadastro de Usuários</h1>
+    <h2>Preencha o formulário abaixo para se cadastrar:</h2>
+
+    <form>
+        <div class="campo">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div class="campo">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="campo">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+        </div>
+
+        <div class="campo">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" maxlength="15" placeholder="(##) #####-####" required>
+        </div>
+
+        <div class="campo">
+            <label for="dropdown">Qual Estado Você Mora:</label>
+            <select id="dropdown" name="dropdown">
+                <option value="selecione">...</option>
+                <option value="sp">São Paulo</option>
+                <option value="rj">Rio de Janeiro</option>
+                <option value="mg">Minas Gerais</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="date">Data de Nascimento:</label>
+            <input type="date" id="date" name="date">
+        </div>
+
+        <div class="campo-checkbox">
+            <input type="checkbox" id="termos" name="termos" required>
+            <label for="termos">Aceito os termos e condições</label>
+        </div>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <script>
+        const botao = document.querySelector('.botao-tema');
+        botao.addEventListener('click', () => {
+            document.body.classList.toggle('modo-claro');
+        });
+        const telInput = document.getElementById('telefone');
+        telInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, "");
+            if (value.length > 0) value = "(" + value;
+            if (value.length > 3) value = value.slice(0, 3) + ") " + value.slice(3);
+            if (value.length > 10) value = value.slice(0, 10) + "-" + value.slice(10, 14);
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>
