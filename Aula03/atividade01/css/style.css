@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: #3f3f3f;
+    font-size: 46px;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+p{
+    color: #3f3f3f;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+hr{
+    border: 1px solid #3f3f3f;
+    margin: 20px;
+    font-size: 36px;
+}
+body{
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+img{
+    width: 300px;
+    height: 400px;
+    border-radius: 25px;
+    
+}
