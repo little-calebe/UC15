@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Anime</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="caixa">
+        <div id="cadastro">
+            <p class="marca">ANIME REGISTER</p>
+            <h1>Cadastro de Anime</h1>
+            <p>Preencha os campos abaixo para registrar um novo anime</p>
+
+            <form onsubmit="cadastrar(event)">
+                <label>Título</label>
+                <input id="titulo" type="text" placeholder="Ex: Naruto Shippuden">
+
+                <label>Quantidade de Episódios</label>
+                <input id="episodios" type="number" placeholder="Ex: 500">
+
+                <label>Autor</label>
+                <input id="autor" type="text" placeholder="Ex: Masashi Kishimoto">
+
+                <label>Descrição</label>
+                <textarea id="descricao" placeholder="Descreva o anime..."></textarea>
+
+                <button>Cadastrar Anime</button>
+            </form>
+        </div>
+
+        <div id="sucesso">
+            <div class="check">✓</div>
+            <h2>Cadastro com Sucesso!</h2>
+            <p>O anime foi cadastrado com sucesso.</p>
+            <div class="informacoes">
+                <p><b>Título:</b> <span id="mostrarTitulo"></span></p>
+                <p><b>Episódios:</b> <span id="mostrarEpisodios"></span></p>
+                <p><b>Autor:</b> <span id="mostrarAutor"></span></p>
+                <p><b>Descrição:</b> <span id="mostrarDescricao"></span></p>
+            </div>
+            <button onclick="novoAnime()">Cadastrar Novo Anime</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
