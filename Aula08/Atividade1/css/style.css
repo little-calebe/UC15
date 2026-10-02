@@ -1,0 +1,11 @@
+#cartao {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row2 {
+    display: flex;
+    gap: 175px;
+}

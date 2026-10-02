@@ -1,0 +1,27 @@
+#cartao {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.row2 > .col {
+    flex: 1 1 18rem;
+}
+
+.row2 .card-img-top {
+    height: 12rem;
+    object-fit: cover;
+}
+
+.row {
+    margin-top: 35px;
+    display: flex;
+}
