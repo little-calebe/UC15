@@ -33,10 +33,14 @@ jobs:
         run: npm install
       - name: Gerar o site
         run: npm run build
+      - name: Preparar publicação em Aula09
+        run: |
+          mkdir -p ../pages/Aula09
+          cp -R dist/. ../pages/Aula09/
       - name: Preparar publicação
         uses: actions/upload-pages-artifact@v3
         with:
-          path: Aula09/dist
+          path: pages
 
   deploy:
     environment:
